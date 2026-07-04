@@ -1,0 +1,27 @@
+.skills {
+  padding: 120px 8%;
+
+  background: #08101f;
+
+  color: white;
+
+  text-align: center;
+}
+
+.skills h2 {
+  margin: 20px 0 60px;
+
+  font-size: 3rem;
+}
+
+.skills h2 span {
+  color: #7a5cff;
+}
+
+.skills-grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+
+  gap: 30px;
+}

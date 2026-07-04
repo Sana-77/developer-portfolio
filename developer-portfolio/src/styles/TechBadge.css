@@ -1,0 +1,41 @@
+.tech-card {
+  background: rgba(255, 255, 255, 0.04);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 20px;
+
+  padding: 45px 20px;
+
+  transition: 0.35s;
+
+  cursor: pointer;
+
+  backdrop-filter: blur(15px);
+}
+
+.tech-card:hover {
+  transform: translateY(-12px);
+
+  border-color: #7a5cff;
+
+  box-shadow: 0 20px 40px rgba(106, 82, 255, 0.25);
+}
+
+.tech-icon {
+  font-size: 4rem;
+
+  margin-bottom: 25px;
+
+  transition: 0.35s;
+}
+
+.tech-card:hover .tech-icon {
+  transform: scale(1.2) rotate(10deg);
+}
+
+.tech-card h3 {
+  font-size: 1.2rem;
+
+  font-weight: 600;
+}
