@@ -14,8 +14,7 @@ function Contact() {
         <span className="section-title">CONTACT</span>
 
         <h2>
-          Let's Work
-          <span> Together</span>
+          <span> Let's Work Together</span>
         </h2>
 
         <p>
@@ -27,7 +26,7 @@ function Contact() {
           <FaEnvelope />
           <div>
             <h4>Email</h4>
-            <p>your@email.com</p>
+            <p>wazirysana@gmail.com</p>
           </div>
         </div>
 
@@ -35,7 +34,7 @@ function Contact() {
           <FaPhone />
           <div>
             <h4>Phone</h4>
-            <p>+93 XXX XXX XXX</p>
+            <p>+93 078 000 000</p>
           </div>
         </div>
 
@@ -48,11 +47,11 @@ function Contact() {
         </div>
 
         <div className="socials">
-          <a href="#">
+          <a href="https://github.com/Sana-77">
             <FaGithub />
           </a>
 
-          <a href="#">
+          <a href="https://www.linkedin.com/in/sana-waziry/">
             <FaLinkedin />
           </a>
         </div>

@@ -54,13 +54,25 @@ function Hero() {
         </div>
 
         <div className="social-links">
-          <a href="#">
+          <a
+            href="https://github.com/Sana-77"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaGithub />
           </a>
-          <a href="#">
+          <a
+            href="https://www.linkedin.com/in/sana-waziry/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaLinkedin />
           </a>
-          <a href="#">
+          <a
+            href="mailto:wazirysana@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaEnvelope />
           </a>
         </div>

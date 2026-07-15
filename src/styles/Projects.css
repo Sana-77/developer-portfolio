@@ -1,0 +1,62 @@
+.projects {
+  padding: 120px 8%;
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(117, 103, 255, 0.15),
+      transparent 35%
+    ),
+    #07101d;
+
+  color: white;
+  padding-top: 0px;
+}
+
+.section-title {
+  display: inline-block;
+
+  font-size: 0.85rem;
+  letter-spacing: 3px;
+
+  color: #7567ff;
+
+  font-weight: 600;
+
+  margin-bottom: 15px;
+}
+
+.projects h2 {
+  font-size: 3.2rem;
+
+  font-weight: 700;
+
+  margin-bottom: 70px;
+
+  line-height: 1.2;
+}
+
+.projects h2 span {
+  background: linear-gradient(90deg, #7567ff, #00d4ff);
+
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+.projects-grid {
+  display: grid;
+
+  grid-template-columns: 1fr;
+
+  gap: 50px;
+}
+
+@media (max-width: 768px) {
+  .projects {
+    padding: 80px 5%;
+  }
+
+  .projects h2 {
+    font-size: 2.2rem;
+  }
+}

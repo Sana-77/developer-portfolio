@@ -8,8 +8,7 @@ function Projects() {
       <span className="section-title">MY PROJECTS</span>
 
       <h2>
-        Featured
-        <span> Projects</span>
+        <span>Featured Projects</span>
       </h2>
 
       <div className="projects-grid">
