@@ -1,5 +1,6 @@
 import "../styles/Hero.css";
 import { useEffect, useRef } from "react";
+import { Link } from "react-scroll";
 import Typed from "typed.js";
 import profile from "../assets/images/profile.jpeg";
 
@@ -34,6 +35,8 @@ function Hero() {
 
   return (
     <section className="hero" id="home">
+      {/* ================= LEFT ================= */}
+
       <div className="hero-left">
         <span className="badge">👋 Hi, I'm Sana</span>
 
@@ -49,8 +52,25 @@ function Hero() {
         </p>
 
         <div className="hero-buttons">
-          <button className="primary-btn">View My Work</button>
-          <button className="secondary-btn">Contact Me</button>
+          <Link
+            to="projects"
+            smooth={true}
+            duration={500}
+            offset={-80}
+            className="primary-btn"
+          >
+            View My Work
+          </Link>
+
+          <Link
+            to="contact"
+            smooth={true}
+            duration={500}
+            offset={-80}
+            className="secondary-btn"
+          >
+            Contact Me
+          </Link>
         </div>
 
         <div className="social-links">
@@ -61,6 +81,7 @@ function Hero() {
           >
             <FaGithub />
           </a>
+
           <a
             href="https://www.linkedin.com/in/sana-waziry/"
             target="_blank"
@@ -68,6 +89,7 @@ function Hero() {
           >
             <FaLinkedin />
           </a>
+
           <a
             href="mailto:wazirysana@gmail.com"
             target="_blank"
@@ -77,6 +99,8 @@ function Hero() {
           </a>
         </div>
       </div>
+
+      {/* ================= RIGHT ================= */}
 
       <div className="hero-right">
         <div className="image-card">

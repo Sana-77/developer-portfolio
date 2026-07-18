@@ -1,17 +1,118 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.app {
+  min-height: 100vh;
+
+  background: var(--bg-primary);
+
+  color: var(--text);
+
+  transition:
+    background 0.35s ease,
+    color 0.35s ease;
 }
 
-body {
-  font-family: "Poppins", sans-serif;
+/* ===========================
+          DARK
+=========================== */
 
-  background: #f6f8fc;
+.app.dark {
+  --hero-bg: radial-gradient(
+    circle at top left,
+    #243b8f 0%,
+    #0b1020 55%,
+    #130b2f 100%
+  );
 
-  overflow-x: hidden;
+  --bg-primary: #07101d;
+  --bg-secondary: #08101f;
+
+  --card-bg: rgba(255, 255, 255, 0.05);
+
+  --border-color: rgba(255, 255, 255, 0.08);
+
+  --text: #ffffff;
+  --text-secondary: #c7cbde;
+
+  --accent: #7567ff;
+  --accent-light: #9b8dff;
+  --accent-soft: rgba(117, 103, 255, 0.12);
+  --accent-shadow: rgba(117, 103, 255, 0.35);
 }
 
-button {
-  font-family: inherit;
+/* ===========================
+          LIGHT
+=========================== */
+
+.app.light {
+  --hero-bg: linear-gradient(135deg, #f8fbff 0%, #edf3ff 55%, #ffffff 100%);
+
+  --bg-primary: #f8f9fc;
+  --bg-secondary: #ffffff;
+
+  --card-bg: rgba(255, 255, 255, 0.85);
+
+  --border-color: rgba(30, 41, 59, 0.08);
+
+  --text: #1f2937;
+  --text-secondary: #5b6475;
+
+  --accent: #5b5cf6;
+  --accent-light: #7c7df8;
+  --accent-soft: rgba(91, 92, 246, 0.1);
+  --accent-shadow: rgba(91, 92, 246, 0.25);
+}
+
+/* ===========================
+          OCEAN
+=========================== */
+
+.app.ocean {
+  --hero-bg: radial-gradient(
+    circle at top left,
+    #0f7fd4 0%,
+    #063b5b 55%,
+    #03253b 100%
+  );
+
+  --bg-primary: #03253b;
+  --bg-secondary: #083854;
+
+  --card-bg: rgba(18, 122, 184, 0.15);
+
+  --border-color: rgba(0, 210, 255, 0.18);
+
+  --text: #ffffff;
+  --text-secondary: #d5eaf4;
+
+  --accent: #00d5ff;
+  --accent-light: #6ce8ff;
+  --accent-soft: rgba(0, 213, 255, 0.12);
+  --accent-shadow: rgba(0, 213, 255, 0.3);
+}
+
+/* ===========================
+          AURORA
+=========================== */
+
+.app.aurora {
+  --hero-bg: radial-gradient(
+    circle at top left,
+    #662d91 0%,
+    #2b1145 55%,
+    #17071f 100%
+  );
+
+  --bg-primary: #17071f;
+  --bg-secondary: #231132;
+
+  --card-bg: rgba(154, 76, 255, 0.12);
+
+  --border-color: rgba(255, 255, 255, 0.08);
+
+  --text: #ffffff;
+  --text-secondary: #e2d7ff;
+
+  --accent: #ff6ad5;
+  --accent-light: #ff9ae5;
+  --accent-soft: rgba(255, 106, 213, 0.12);
+  --accent-shadow: rgba(255, 106, 213, 0.35);
 }

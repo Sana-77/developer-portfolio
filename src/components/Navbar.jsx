@@ -1,17 +1,25 @@
 import "../styles/Navbar.css";
-import { FaCode } from "react-icons/fa";
+import { FaCode, FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-scroll";
+import { useState } from "react";
+import ThemeToggle from "./ThemeToggle";
 
-function Navbar() {
+function Navbar({ theme, setTheme }) {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const closeMenu = () => setMenuOpen(false);
+
   return (
     <nav className="navbar">
+      {/* Logo */}
       <div className="logo">
         <FaCode className="logo-icon" />
         <span>SANA</span>
         <span className="accent">WAZIRY</span>
       </div>
 
-      <ul className="nav-links">
+      {/* Navigation */}
+      <ul className={`nav-links ${menuOpen ? "open" : ""}`}>
         <li>
           <Link
             to="home"
@@ -20,6 +28,7 @@ function Navbar() {
             spy={true}
             offset={-80}
             activeClass="active"
+            onClick={closeMenu}
           >
             Home
           </Link>
@@ -32,6 +41,7 @@ function Navbar() {
             duration={500}
             offset={-80}
             activeClass="active"
+            onClick={closeMenu}
           >
             About
           </Link>
@@ -44,6 +54,7 @@ function Navbar() {
             duration={500}
             offset={-80}
             activeClass="active"
+            onClick={closeMenu}
           >
             Skills
           </Link>
@@ -56,6 +67,7 @@ function Navbar() {
             duration={500}
             offset={-80}
             activeClass="active"
+            onClick={closeMenu}
           >
             Projects
           </Link>
@@ -68,15 +80,26 @@ function Navbar() {
             duration={500}
             offset={-80}
             activeClass="active"
+            onClick={closeMenu}
           >
             Contact
           </Link>
         </li>
       </ul>
 
-      <a href="/Sana-Waziry-CV.pdf" className="cv-btn" download>
-        Download CV
-      </a>
+      {/* Right Side */}
+      <div className="nav-right">
+        <a href="/Sana-Waziry-CV.pdf" className="cv-btn" download>
+          Download CV
+        </a>
+
+        <ThemeToggle theme={theme} setTheme={setTheme} />
+      </div>
+
+      {/* Mobile Menu Button */}
+      <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
+        {menuOpen ? <FaTimes /> : <FaBars />}
+      </div>
     </nav>
   );
 }
