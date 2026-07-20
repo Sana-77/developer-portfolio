@@ -6,6 +6,7 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import { useState, useEffect } from "react";
+import FeedbackWall from "./components/FeedbackWall";
 import "./App.css";
 function App() {
   const [theme, setTheme] = useState("dark");
@@ -29,6 +30,7 @@ function App() {
       <About />
       <Skills />
       <Projects />
+      <FeedbackWall />
       <Contact />
       <Footer />
     </div>

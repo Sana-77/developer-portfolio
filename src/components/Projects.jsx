@@ -1,6 +1,7 @@
 import "../styles/Projects.css";
 import projects from "../data/projects";
 import ProjectCard from "./ProjectCard";
+import ProjectUpdate from "./ProjectUpdates";
 
 function Projects() {
   return (
@@ -8,8 +9,10 @@ function Projects() {
       <span className="section-title">MY PROJECTS</span>
 
       <h2>
-        <span>Featured Projects</span>
+        Featured <span>Projects</span>
       </h2>
+
+      <ProjectUpdate />
 
       <div className="projects-grid">
         {projects.map((project) => (

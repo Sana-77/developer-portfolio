@@ -58,4 +58,17 @@ export default [
     name: "GitHub",
     color: "#ffffff",
   },
+  {
+    name: "React",
+    level: 90,
+    icon: FaReact,
+    color: "#61DBFB",
+
+    funFact: "⚛️ Built over 10 React projects.",
+  },
+  {
+    name: "CSS",
+
+    funFact: "🎨 I enjoy creating responsive UI.",
+  },
 ];

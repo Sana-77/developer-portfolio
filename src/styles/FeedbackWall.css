@@ -1,0 +1,293 @@
+.feedback-wall {
+  padding: 100px 8%;
+  background: var(--bg-secondary);
+  color: var(--text);
+  transition: 0.35s;
+}
+
+.feedback-wall h2 {
+  font-size: 3rem;
+  margin: 20px 0 50px;
+}
+
+.feedback-wall h2 span {
+  color: var(--accent);
+}
+
+/* ============================
+      Form
+============================ */
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  max-width: 700px;
+
+  margin-bottom: 40px;
+}
+
+.feedback-form input,
+.feedback-form select,
+.feedback-form textarea {
+  background: var(--card-bg);
+
+  color: var(--text);
+
+  border: 1px solid var(--border-color);
+
+  border-radius: 16px;
+
+  padding: 16px;
+
+  font-size: 1rem;
+
+  outline: none;
+
+  transition: 0.3s;
+}
+
+.feedback-form input:focus,
+.feedback-form select:focus,
+.feedback-form textarea:focus {
+  border-color: var(--accent);
+}
+
+.feedback-form textarea {
+  resize: none;
+}
+
+.feedback-form button {
+  width: 220px;
+
+  padding: 16px;
+
+  border: none;
+
+  border-radius: 14px;
+
+  cursor: pointer;
+
+  color: white;
+
+  font-size: 1rem;
+
+  font-weight: 600;
+
+  background: linear-gradient(135deg, #4f8cff, #7b3cff);
+
+  transition: 0.35s;
+}
+
+.feedback-form button:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 15px 35px rgba(100, 80, 255, 0.3);
+}
+
+/* ============================
+      Sort
+============================ */
+
+.sort-box {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin-bottom: 40px;
+}
+
+.sort-box label {
+  font-weight: 600;
+}
+
+.sort-box select {
+  padding: 12px 18px;
+
+  border-radius: 12px;
+
+  background: var(--card-bg);
+
+  color: var(--text);
+
+  border: 1px solid var(--border-color);
+}
+/* ============================
+      Feedback List
+============================ */
+
+.feedback-list {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+  gap: 30px;
+}
+
+.feedback-card {
+  background: var(--card-bg);
+
+  border: 1px solid var(--border-color);
+
+  border-radius: 24px;
+
+  padding: 30px;
+
+  backdrop-filter: blur(18px);
+
+  transition: 0.35s;
+
+  animation: fadeUp 0.5s ease;
+}
+
+.feedback-card:hover {
+  transform: translateY(-8px);
+
+  border-color: var(--accent);
+
+  box-shadow: 0 20px 45px rgba(90, 70, 255, 0.25);
+}
+
+.feedback-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 20px;
+}
+
+.feedback-header h3 {
+  font-size: 1.2rem;
+
+  color: var(--text);
+}
+
+.featured-badge {
+  background: linear-gradient(135deg, #ffd54f, #ff9800);
+
+  padding: 8px 14px;
+
+  border-radius: 30px;
+
+  font-size: 0.8rem;
+
+  font-weight: 600;
+
+  color: #222;
+}
+
+.stars {
+  display: flex;
+
+  gap: 6px;
+
+  margin-bottom: 18px;
+
+  color: #ffd54f;
+
+  font-size: 1.15rem;
+}
+
+.feedback-card p {
+  line-height: 1.8;
+
+  color: var(--text-secondary);
+}
+.featured {
+  border: 2px solid gold;
+
+  position: relative;
+}
+
+.featured::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  border-radius: 24px;
+
+  padding: 2px;
+
+  background: linear-gradient(135deg, #ffd54f, #ff9800);
+
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+
+  -webkit-mask-composite: xor;
+
+  mask-composite: exclude;
+
+  pointer-events: none;
+}
+
+/* ============================
+      Animation
+============================ */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+/* ============================
+      Responsive
+============================ */
+
+@media (max-width: 768px) {
+  .feedback-wall {
+    padding: 80px 6%;
+  }
+
+  .feedback-wall h2 {
+    font-size: 2.3rem;
+  }
+
+  .feedback-form button {
+    width: 100%;
+  }
+
+  .sort-box {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .feedback-header {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .feedback-list {
+    grid-template-columns: 1fr;
+  }
+
+  .feedback-card {
+    padding: 22px;
+  }
+
+  .feedback-wall h2 {
+    font-size: 2rem;
+  }
+}
